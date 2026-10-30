@@ -1,32 +1,34 @@
-import type { CartItem } from '../types/cart';
+import { useCartDispatch, useCartState } from '../context/CartContext';
 
-interface CartItemsListProps {
-    items: CartItem[];
-    onRemoveItem: (id: string) => void;
-}
+export function CartItemsList() {
+    const { items } = useCartState();
+    const dispatch = useCartDispatch();
 
-export function CartItemsList({ items, onRemoveItem }: CartItemsListProps) {
     if (items.length === 0) {
-        return <p className="cart-empty-msg">Your cart is empty.</p>; 
+        return <p className="cart-empty-msg">Your cart is empty.</p>;
     }
 
     return (
         <ul className="cart-items-list">
             {items.map((item) => (
-                <li key={item.id} className="cart-item-row"> 
+                <li key={item.id} className="cart-item-row">
                     <div className="cart-item-info">
                         <span className="cart-item-name">{item.name}</span>
-                        <span className="cart-item-meta">{item.quantity} × ${item.price.toFixed(2)} </span>
+                        <span className="cart-item-meta">
+                            {item.quantity} × ${item.price.toFixed(2)}
+                        </span>
                     </div>
 
                     <div className="cart-item-actions">
-                        <span className="class-item-subtotal">
-                            ${(item.price * item.quantity).toFixed(2)} 
+                        <span className="cart-item-subtotal">
+                            ${(item.price * item.quantity).toFixed(2)}
                         </span>
                         <button
                             type="button"
                             className="remove-btn"
-                            onClick={() => onRemoveItem(item.id)}
+                            onClick={() =>
+                                dispatch({ type: 'REMOVE_ITEM', payload: { id: item.id } })
+                            }
                         >
                             Remove
                         </button>
@@ -35,4 +37,4 @@ export function CartItemsList({ items, onRemoveItem }: CartItemsListProps) {
             ))}
         </ul>
     );
-}
+} 
