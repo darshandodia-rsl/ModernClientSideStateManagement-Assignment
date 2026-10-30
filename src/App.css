@@ -214,3 +214,23 @@
   display: flex;                                                             
   flex: 1;                                                                   
 }
+
+.cart-success-msg {                                                          
+  color: #16a34a;                                                            
+  background-color: #f0fdf4;                                                 
+  border: 1px solid #bbf7d0;                                                 
+  padding: 0.5rem;                                                           
+  border-radius: 4px;                                                        
+  font-size: 0.875rem;                                                       
+  margin-bottom: 1rem;                                                       
+}                                                                            
+                                                                             
+.cart-error-msg {                                                            
+  color: #dc2626;                                                            
+  background-color: #fef2f2;                                                 
+  border: 1px solid #fecaca;                                                 
+  padding: 0.5rem;                                                           
+  border-radius: 4px;                                                        
+  font-size: 0.875rem;                                                       
+  margin-bottom: 1rem;                                                       
+}  
