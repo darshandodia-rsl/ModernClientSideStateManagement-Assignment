@@ -1,25 +1,34 @@
-import type { CartItem } from "../types/cart";
-import { CartItemsList } from "./CartItemsList";
+import { useShallow } from 'zustand/react/shallow';
+import { selectTotalPrice, useCartStore } from '../store/useCartStore';
+import { CartItemsList } from './CartItemsList';
 
-interface CartDrawerProps {
-    items: CartItem[];
-    totalPrice: number;
-    onRemoveItem: (id: string) => void;
-    onCheckout?: () => void;
-}
+export function CartDrawer() {
+    const { items, status, error, checkout } = useCartStore(
+        useShallow((state) => ({
+            items: state.items,
+            status: state.status,
+            error: state.error,
+            checkout: state.checkout,
+        }))
+    );
 
-export function CartDrawer({
-    items,
-    totalPrice,
-    onRemoveItem,
-    onCheckout,
-}: CartDrawerProps) {
+    const totalPrice = useCartStore(selectTotalPrice);
+    const isSubmitting = status === 'submitting';
+
     return (
         <aside className="cart-drawer">
-            <h2> Your Cart </h2>
+            <h2>Your Cart</h2>
 
-            <div className = "cart-drwer-content">
-                <CartItemsList items={items} onRemoveItem={onRemoveItem} />
+            {status === 'success' && (
+                <p className="cart-success-msg">Order placed successfully!</p>
+            )}
+
+            {status === 'error' && error && (
+                <p className="cart-error-msg">{error}</p>
+            )}
+
+            <div className="cart-drawer-content">
+                <CartItemsList />
             </div>
 
             <div className="cart-footer">
@@ -31,10 +40,10 @@ export function CartDrawer({
                 <button
                     type="button"
                     className="checkout-btn"
-                    onClick={onCheckout}
-                    disabled={items.length === 0}
+                    onClick={checkout}
+                    disabled={items.length === 0 || isSubmitting}
                 >
-                    Checkout
+                    {isSubmitting ? 'Submitting...' : 'Checkout'}
                 </button>
             </div>
         </aside>

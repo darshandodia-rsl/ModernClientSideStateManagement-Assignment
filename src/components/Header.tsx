@@ -1,13 +1,9 @@
 import { Toolbar } from './Toolbar';
 
-interface HeaderProps {
-    cartCount: number;
-}
-
-export function Header({ cartCount }: HeaderProps) {
+export function Header() {
     return (
         <header className="header">
-            <Toolbar cartCount={cartCount} />
+            <Toolbar />
         </header>
     );
-}
+} 
