@@ -1,0 +1,216 @@
+.badge-count {                                                               
+  display: inline-flex;                                                      
+  align-items: center;                                                       
+  justify-content: center;                                                   
+  background-color: #ef4444;                                                 
+  color: white;                                                              
+  font-size: 0.75rem;                                                        
+  font-weight: bold;                                                         
+  min-width: 18px;                                                           
+  height: 18px;                                                              
+  border-radius: 9999px;                                                     
+  padding: 0 6px;                                                            
+}
+
+.toolbar {                                             
+  display: flex;                                       
+  justify-content: space-between;                      
+  align-items: center;                                 
+  padding: 1rem 2rem;                                  
+  border-bottom: 1px solid #ccc;                       
+}                                                      
+                                                       
+.cart-badge-container {                                
+  display: flex;                                       
+  align-items: center;                                 
+  gap: 0.5rem;                                         
+} 
+
+.header {                                              
+  width: 100%;                                         
+  border-bottom: 1px solid #e5e7eb;                    
+  background-color: #ffffff;                           
+} 
+
+.product-card {                                        
+  border: 1px solid #e5e7eb;                           
+  border-radius: 8px;                                  
+  padding: 1rem;                                       
+  display: flex;                                       
+  flex-direction: column;                              
+  justify-content: space-between;                      
+  background-color: #ffffff;                           
+}                                                      
+                                                       
+.product-card h3 {                                     
+  margin: 0 0 0.5rem 0;                                
+  font-size: 1.1rem;                                   
+}                                                      
+                                                       
+.product-price {                                       
+  font-size: 1rem;                                     
+  font-weight: 600;                                    
+  margin: 0 0 1rem 0;                                  
+}                                                      
+                                                       
+.product-card button {                                 
+  padding: 0.5rem 1rem;                                
+  background-color: #2563eb;                           
+  color: #ffffff;                                      
+  border: none;                                        
+  border-radius: 4px;                                  
+  cursor: pointer;                                     
+  font-weight: 500;                                    
+}                                                      
+                                                       
+.product-card button:hover {                           
+  background-color: #1d4ed8;                           
+}
+
+.catalog {                                                                   
+  flex: 1;                                                                   
+  padding: 1.5rem;                                                           
+}                                                                            
+                                                                             
+.catalog h2 {                                                                
+  margin-top: 0;                                                             
+  margin-bottom: 1.5rem;                                                     
+}                                                                            
+                                                                             
+.product-grid {                                                              
+  display: grid;                                                             
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));              
+  gap: 1.5rem;                                                               
+}                                                                            
+                                                                             
+.catalog-error {                                                             
+  color: #dc2626;                                                            
+  font-weight: 500;                                                          
+}
+
+.cart-empty-msg {                                                            
+  color: #6b7280;                                                            
+  font-style: italic;                                                        
+  padding: 1rem 0;                                                           
+}                                                                            
+                                                                             
+.cart-items-list {                                                           
+  list-style: none;                                                          
+  padding: 0;                                                                
+  margin: 0;                                                                 
+}                                                                            
+                                                                             
+.cart-item-row {                                                             
+  display: flex;                                                             
+  justify-content: space-between;                                            
+  align-items: center;                                                       
+  padding: 0.75rem 0;                                                        
+  border-bottom: 1px solid #e5e7eb;                                          
+}                                                                            
+                                                                             
+.cart-item-info {                                                            
+  display: flex;                                                             
+  flex-direction: column;                                                    
+}                                                                            
+                                                                             
+.cart-item-name {                                                            
+  font-weight: 500;                                                          
+}                                                                            
+                                                                             
+.cart-item-meta {                                                            
+  font-size: 0.875rem;                                                       
+  color: #6b7280;                                                            
+}                                                                            
+                                                                             
+.cart-item-actions {                                                         
+  display: flex;                                                             
+  align-items: center;                                                       
+  gap: 0.75rem;                                                              
+}                                                                            
+                                                                             
+.cart-item-subtotal {                                                        
+  font-weight: 600;                                                          
+}                                                                            
+                                                                             
+.remove-btn {                                                                
+  background-color: transparent;                                             
+  color: #dc2626;                                                            
+  border: 1px solid #fca5a5;                                                 
+  border-radius: 4px;                                                        
+  padding: 0.25rem 0.5rem;                                                   
+  font-size: 0.75rem;                                                        
+  cursor: pointer;                                                           
+}                                                                            
+                                                                             
+.remove-btn:hover {                                                          
+  background-color: #fee2e2;                                                 
+}
+
+.cart-drawer {                                                               
+  width: 340px;                                                              
+  border-left: 1px solid #e5e7eb;                                            
+  background-color: #ffffff;                                                 
+  padding: 1.5rem;                                                           
+  display: flex;                                                             
+  flex-direction: column;                                                    
+}                                                                            
+                                                                             
+.cart-drawer h2 {                                                            
+  margin-top: 0;                                                             
+  margin-bottom: 1rem;                                                       
+}                                                                            
+                                                                             
+.cart-drawer-content {                                                       
+  flex: 1;                                                                   
+  overflow-y: auto;                                                          
+}                                                                            
+                                                                             
+.cart-footer {                                                               
+  margin-top: 1.5rem;                                                        
+  padding-top: 1rem;                                                         
+  border-top: 1px solid #e5e7eb;                                             
+}                                                                            
+                                                                             
+.cart-total-row {                                                            
+  display: flex;                                                             
+  justify-content: space-between;                                            
+  align-items: center;                                                       
+  font-size: 1.1rem;                                                         
+  font-weight: 600;                                                          
+  margin-bottom: 1rem;                                                       
+}                                                                            
+                                                                             
+.checkout-btn {                                                              
+  width: 100%;                                                               
+  padding: 0.75rem;                                                          
+  background-color: #16a34a; /* Green */                                     
+  color: #ffffff;                                                            
+  border: none;                                                              
+  border-radius: 4px;                                                        
+  font-size: 1rem;                                                           
+  font-weight: 600;                                                          
+  cursor: pointer;                                                           
+}                                                                            
+                                                                             
+.checkout-btn:hover:not(:disabled) {                                         
+  background-color: #15803d;                                                 
+}                                                                            
+                                                                             
+.checkout-btn:disabled {                                                     
+  background-color: #d1d5db;                                                 
+  cursor: not-allowed;                                                       
+}
+
+.app-container {                                                             
+  display: flex;                                                             
+  flex-direction: column;                                                    
+  min-height: 100vh;                                                         
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;                                                            
+  color: #1f2937;                                                            
+  background-color: #f9fafb;                                                 
+}                                                                            
+                                                                             
+.app-main {                                                                  
+  display: flex;                                                             
+  flex: 1;                                                                   
+}
