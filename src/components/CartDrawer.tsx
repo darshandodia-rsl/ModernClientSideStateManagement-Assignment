@@ -1,25 +1,33 @@
-import type { CartItem } from "../types/cart";
-import { CartItemsList } from "./CartItemsList";
+import { useAtomValue, useSetAtom } from 'jotai';
+import {
+    cartItemsAtom,
+    clearCartAtom,
+    totalPriceAtom,
+} from '../atoms/cartAtoms';
+import { CartItemsList } from './CartItemsList';
 
-interface CartDrawerProps {
-    items: CartItem[];
-    totalPrice: number;
-    onRemoveItem: (id: string) => void;
-    onCheckout?: () => void;
-}
+export function CartDrawer() {
+    const items = useAtomValue(cartItemsAtom);
+    const totalPrice = useAtomValue(totalPriceAtom);
+    const clearCart = useSetAtom(clearCartAtom);
 
-export function CartDrawer({
-    items,
-    totalPrice,
-    onRemoveItem,
-    onCheckout,
-}: CartDrawerProps) {
     return (
         <aside className="cart-drawer">
-            <h2> Your Cart </h2>
+            <div className="cart-drawer-header">
+                <h2>Your Cart</h2>
+                {items.length > 0 && (
+                    <button
+                        type="button"
+                        className="clear-cart-btn"
+                        onClick={clearCart}
+                    >
+                        Clear Cart
+                    </button>
+                )}
+            </div>
 
-            <div className = "cart-drwer-content">
-                <CartItemsList items={items} onRemoveItem={onRemoveItem} />
+            <div className="cart-drawer-content">
+                <CartItemsList />
             </div>
 
             <div className="cart-footer">
@@ -31,7 +39,6 @@ export function CartDrawer({
                 <button
                     type="button"
                     className="checkout-btn"
-                    onClick={onCheckout}
                     disabled={items.length === 0}
                 >
                     Checkout

@@ -214,3 +214,28 @@
   display: flex;                                                             
   flex: 1;                                                                   
 }
+
+.cart-drawer-header {                                                        
+  display: flex;                                                             
+  justify-content: space-between;                                            
+  align-items: center;                                                       
+  margin-bottom: 1rem;                                                       
+}                                                                            
+                                                                             
+.cart-drawer-header h2 {                                                     
+  margin: 0;                                                                 
+}                                                                            
+                                                                             
+.clear-cart-btn {                                                            
+  background: none;                                                          
+  border: none;                                                              
+  color: #dc2626;                                                            
+  font-size: 0.8rem;                                                         
+  cursor: pointer;                                                           
+  text-decoration: underline;                                                
+  padding: 0;                                                                
+}                                                                            
+                                                                             
+.clear-cart-btn:hover {                                                      
+  color: #b91c1c;                                                            
+}  
