@@ -14,6 +14,7 @@ interface CartStoreState {
     removeItem: (id: string) => void;
     checkout: () => Promise<void>;
     resetStatus: () => void;
+    clearCart: () => void; 
 }
 
 export const useCartStore = create<CartStoreState>((set, get) => ({
@@ -73,6 +74,8 @@ export const useCartStore = create<CartStoreState>((set, get) => ({
     },
 
     resetStatus: () => set({ status: 'idle', error: null }),
+
+    clearCart: () => set({ items: [] }),
 }));
 
 // Derived Selectors (Pure functions, NOT duplicated stored state)           
