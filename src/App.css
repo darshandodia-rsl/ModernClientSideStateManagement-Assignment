@@ -1,236 +1,337 @@
-.badge-count {                                                               
-  display: inline-flex;                                                      
-  align-items: center;                                                       
-  justify-content: center;                                                   
-  background-color: #ef4444;                                                 
-  color: white;                                                              
-  font-size: 0.75rem;                                                        
-  font-weight: bold;                                                         
-  min-width: 18px;                                                           
-  height: 18px;                                                              
-  border-radius: 9999px;                                                     
-  padding: 0 6px;                                                            
+.badge-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ef4444;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  padding: 0 6px;
 }
 
-.toolbar {                                             
-  display: flex;                                       
-  justify-content: space-between;                      
-  align-items: center;                                 
-  padding: 1rem 2rem;                                  
-  border-bottom: 1px solid #ccc;                       
-}                                                      
-                                                       
-.cart-badge-container {                                
-  display: flex;                                       
-  align-items: center;                                 
-  gap: 0.5rem;                                         
-} 
-
-.header {                                              
-  width: 100%;                                         
-  border-bottom: 1px solid #e5e7eb;                    
-  background-color: #ffffff;                           
-} 
-
-.product-card {                                        
-  border: 1px solid #e5e7eb;                           
-  border-radius: 8px;                                  
-  padding: 1rem;                                       
-  display: flex;                                       
-  flex-direction: column;                              
-  justify-content: space-between;                      
-  background-color: #ffffff;                           
-}                                                      
-                                                       
-.product-card h3 {                                     
-  margin: 0 0 0.5rem 0;                                
-  font-size: 1.1rem;                                   
-}                                                      
-                                                       
-.product-price {                                       
-  font-size: 1rem;                                     
-  font-weight: 600;                                    
-  margin: 0 0 1rem 0;                                  
-}                                                      
-                                                       
-.product-card button {                                 
-  padding: 0.5rem 1rem;                                
-  background-color: #2563eb;                           
-  color: #ffffff;                                      
-  border: none;                                        
-  border-radius: 4px;                                  
-  cursor: pointer;                                     
-  font-weight: 500;                                    
-}                                                      
-                                                       
-.product-card button:hover {                           
-  background-color: #1d4ed8;                           
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
 }
 
-.catalog {                                                                   
-  flex: 1;                                                                   
-  padding: 1.5rem;                                                           
-}                                                                            
-                                                                             
-.catalog h2 {                                                                
-  margin-top: 0;                                                             
-  margin-bottom: 1.5rem;                                                     
-}                                                                            
-                                                                             
-.product-grid {                                                              
-  display: grid;                                                             
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));              
-  gap: 1.5rem;                                                               
-}                                                                            
-                                                                             
-.catalog-error {                                                             
-  color: #dc2626;                                                            
-  font-weight: 500;                                                          
+.cart-badge-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.cart-empty-msg {                                                            
-  color: #6b7280;                                                            
-  font-style: italic;                                                        
-  padding: 1rem 0;                                                           
-}                                                                            
-                                                                             
-.cart-items-list {                                                           
-  list-style: none;                                                          
-  padding: 0;                                                                
-  margin: 0;                                                                 
-}                                                                            
-                                                                             
-.cart-item-row {                                                             
-  display: flex;                                                             
-  justify-content: space-between;                                            
-  align-items: center;                                                       
-  padding: 0.75rem 0;                                                        
-  border-bottom: 1px solid #e5e7eb;                                          
-}                                                                            
-                                                                             
-.cart-item-info {                                                            
-  display: flex;                                                             
-  flex-direction: column;                                                    
-}                                                                            
-                                                                             
-.cart-item-name {                                                            
-  font-weight: 500;                                                          
-}                                                                            
-                                                                             
-.cart-item-meta {                                                            
-  font-size: 0.875rem;                                                       
-  color: #6b7280;                                                            
-}                                                                            
-                                                                             
-.cart-item-actions {                                                         
-  display: flex;                                                             
-  align-items: center;                                                       
-  gap: 0.75rem;                                                              
-}                                                                            
-                                                                             
-.cart-item-subtotal {                                                        
-  font-weight: 600;                                                          
-}                                                                            
-                                                                             
-.remove-btn {                                                                
-  background-color: transparent;                                             
-  color: #dc2626;                                                            
-  border: 1px solid #fca5a5;                                                 
-  border-radius: 4px;                                                        
-  padding: 0.25rem 0.5rem;                                                   
-  font-size: 0.75rem;                                                        
-  cursor: pointer;                                                           
-}                                                                            
-                                                                             
-.remove-btn:hover {                                                          
-  background-color: #fee2e2;                                                 
+.header {
+  width: 100%;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #ffffff;
 }
 
-.cart-drawer {                                                               
-  width: 340px;                                                              
-  border-left: 1px solid #e5e7eb;                                            
-  background-color: #ffffff;                                                 
-  padding: 1.5rem;                                                           
-  display: flex;                                                             
-  flex-direction: column;                                                    
-}                                                                            
-                                                                             
-.cart-drawer h2 {                                                            
-  margin-top: 0;                                                             
-  margin-bottom: 1rem;                                                       
-}                                                                            
-                                                                             
-.cart-drawer-content {                                                       
-  flex: 1;                                                                   
-  overflow-y: auto;                                                          
-}                                                                            
-                                                                             
-.cart-footer {                                                               
-  margin-top: 1.5rem;                                                        
-  padding-top: 1rem;                                                         
-  border-top: 1px solid #e5e7eb;                                             
-}                                                                            
-                                                                             
-.cart-total-row {                                                            
-  display: flex;                                                             
-  justify-content: space-between;                                            
-  align-items: center;                                                       
-  font-size: 1.1rem;                                                         
-  font-weight: 600;                                                          
-  margin-bottom: 1rem;                                                       
-}                                                                            
-                                                                             
-.checkout-btn {                                                              
-  width: 100%;                                                               
-  padding: 0.75rem;                                                          
-  background-color: #16a34a; /* Green */                                     
-  color: #ffffff;                                                            
-  border: none;                                                              
-  border-radius: 4px;                                                        
-  font-size: 1rem;                                                           
-  font-weight: 600;                                                          
-  cursor: pointer;                                                           
-}                                                                            
-                                                                             
-.checkout-btn:hover:not(:disabled) {                                         
-  background-color: #15803d;                                                 
-}                                                                            
-                                                                             
-.checkout-btn:disabled {                                                     
-  background-color: #d1d5db;                                                 
-  cursor: not-allowed;                                                       
+.product-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
 }
 
-.app-container {                                                             
-  display: flex;                                                             
-  flex-direction: column;                                                    
-  min-height: 100vh;                                                         
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;                                                            
-  color: #1f2937;                                                            
-  background-color: #f9fafb;                                                 
-}                                                                            
-                                                                             
-.app-main {                                                                  
-  display: flex;                                                             
-  flex: 1;                                                                   
+.product-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
 }
 
-.cart-success-msg {                                                          
-  color: #16a34a;                                                            
-  background-color: #f0fdf4;                                                 
-  border: 1px solid #bbf7d0;                                                 
-  padding: 0.5rem;                                                           
-  border-radius: 4px;                                                        
-  font-size: 0.875rem;                                                       
-  margin-bottom: 1rem;                                                       
-}                                                                            
-                                                                             
-.cart-error-msg {                                                            
-  color: #dc2626;                                                            
-  background-color: #fef2f2;                                                 
-  border: 1px solid #fecaca;                                                 
-  padding: 0.5rem;                                                           
-  border-radius: 4px;                                                        
-  font-size: 0.875rem;                                                       
-  margin-bottom: 1rem;                                                       
-}  
+.product-price {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.product-card button {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.product-card button:hover {
+  background-color: #1d4ed8;
+}
+
+.catalog {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.catalog h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.catalog-error {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.cart-empty-msg {
+  color: #6b7280;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.cart-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item-name {
+  font-weight: 500;
+}
+
+.cart-item-meta {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cart-item-subtotal {
+  font-weight: 600;
+}
+
+.remove-btn {
+  background-color: transparent;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #fee2e2;
+}
+
+.cart-drawer {
+  width: 340px;
+  border-left: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-drawer h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.cart-drawer-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cart-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkout-btn:hover:not(:disabled) {
+  background-color: #15803d;
+}
+
+.checkout-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+.app-main {
+  display: flex;
+  flex: 1;
+}
+
+.cart-success-msg {
+  color: #16a34a;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.cart-error-msg {
+  color: #dc2626;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.cart-error-banner {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.payment-panel {
+  width: 320px;
+  border-left: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-panel h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.payment-status-badge {
+  font-size: 0.85rem;
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+.payment-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.submit-payment-btn {
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-payment-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.cancel-payment-btn {
+  padding: 0.75rem;
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-payment-btn:hover {
+  background-color: #b91c1c;
+}
+
+.payment-error-alert {
+  background-color: #fef2f2;
+  border: 1px solid #f87171;
+  color: #991b1b;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.payment-success {
+  background-color: #f0fdf4;
+  border: 1px solid #86efac;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.payment-success h3 {
+  color: #166534;
+  margin-top: 0;
+}
+
+.reset-btn {
+  padding: 0.5rem;
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
